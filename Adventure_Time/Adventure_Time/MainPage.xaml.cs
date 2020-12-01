@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,7 +14,15 @@ namespace Adventure_Time
         public MainPage()
         {
             InitializeComponent();
+            profilImage.Source = ImageSource.FromFile("AT.jpg");
+            aboutAT.ItemsSource = GetMenuList();
+            var homePage = typeof(Characters.FinntheKidPage);
 
+        }
+
+        private IEnumerable GetMenuList()
+        {
+            throw new NotImplementedException();
         }
     }
 }
