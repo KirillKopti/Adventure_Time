@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Characters\BMOPage.xaml.cs">
+      <DependentUpon>BMOPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Characters\FinntheKidPage.xaml.cs">
+      <DependentUpon>FinntheKidPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Characters\IceKingPage.xaml.cs">
+      <DependentUpon>IceKingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Characters\JakePage.xaml.cs">
+      <DependentUpon>JakePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Characters\MarcelinePage.xaml.cs">
+      <DependentUpon>MarcelinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Characters\PrincessGumPage.xaml.cs">
+      <DependentUpon>PrincessGumPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Characters\BMOPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Characters\FinntheKidPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Characters\IceKingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Characters\JakePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Characters\MarcelinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Characters\PrincessGumPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
