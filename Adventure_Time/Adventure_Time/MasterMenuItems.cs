@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Adventure_Time
 {
-    class MasterMenuItems
+    public class MasterMenuItems
     {
         public string Text { get; set; }
         public string Detail { get; set; }

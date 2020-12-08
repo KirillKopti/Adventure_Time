@@ -16,13 +16,56 @@ namespace Adventure_Time
             InitializeComponent();
             profilImage.Source = ImageSource.FromFile("AT.jpg");
             aboutAT.ItemsSource = GetMenuList();
-            var homePage = typeof(Characters.FinntheKidPage);
-
+            var homePage = typeof(Characters.FinntheKid);
+            Detail = new NavigationPage((Page)Activator.CreateInstance(homePage));
+            IsPresented = false;
         }
 
-        private IEnumerable GetMenuList()
+        public List<MasterMenuItems> GetMenuList()
         {
-            throw new NotImplementedException();
+            var list = new List<MasterMenuItems>();
+            list.Add(new MasterMenuItems()
+            {
+                Text = "AdventureTime",
+                Detail = "",
+                ImagePath = "Fin.jpg",
+                TargetPage = typeof(Characters.FinntheKid)
+            });
+            list.Add(new MasterMenuItems()
+            {
+                Text = "AdventureTime",
+                Detail = "",
+                ImagePath = "Jake.jpg",
+                TargetPage = typeof(Characters.Jake)
+            });
+            list.Add(new MasterMenuItems()
+            {
+                Text = "AdventureTime",
+                Detail = "",
+                ImagePath = "BMO.jpg",
+                TargetPage = typeof(Characters.BMO)
+            });
+            list.Add(new MasterMenuItems()
+            {
+                Text = "AdventureTime",
+                Detail = "",
+                ImagePath = "bubblegum.jpg",
+                TargetPage = typeof(Characters.PrincessGum)
+            });
+            list.Add(new MasterMenuItems()
+            {
+                Text = "AdventureTime",
+                Detail = "",
+                ImagePath = "marceline.jpg",
+                TargetPage = typeof(Characters.Marceline)
+            });
+            list.Add(new MasterMenuItems()
+            {
+                Text = "AdventureTime",
+                Detail = "",
+                ImagePath = "IceKing.jpg",
+                TargetPage = typeof(Characters.IceKing)
+            });
         }
     }
 }
