@@ -67,5 +67,13 @@ namespace Adventure_Time
                 TargetPage = typeof(Characters.IceKing)
             });
         }
+        private void AboutAT_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selecdetMenuItem = (MasterMenuItems)e.SelectedItem;
+            Type selctedPage = selecdetMenuItem.TargetPage;
+            Detail = new NavigationPage((Page)Activator.CreateInstance(selctedPage));
+            IsPresented = false;
+        }
+        
     }
 }

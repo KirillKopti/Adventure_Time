@@ -9,7 +9,7 @@
             <ContentPage.Content>
                 <StackLayout Margin="10" Orientation="Vertical">
                     <Image x:Name="profilImage"></Image>
-                    <ListView x:Name="aboutAT" ItemSelected="aboutAT_ItemSelected">
+                    <ListView x:Name="aboutAT" ItemSelected="AboutAT_ItemSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ImageCell Text="{Binding Text}" Detail="{Binding Detail}"

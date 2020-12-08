@@ -10,5 +10,10 @@ namespace Adventure_Time
         public string Detail { get; set; }
         public string ImagePath { get; set; }
         public Type TargetPage { get; set; }
+
+        public static implicit operator Type(MasterMenuItems v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
